@@ -32,8 +32,6 @@ The perceptron convergence theorem (Rosenblatt, 1958; Block, 1962) proves that i
 
 where R is the radius of the smallest sphere enclosing the data and γ is the geometric margin of the optimal separating hyperplane.
 
-![Perceptron Decision Boundary](public/screenshots/demo.png)
-
 ## Install
 
 ```bash
@@ -44,6 +42,8 @@ npm run dev
 ```
 
 Then open http://localhost:5173 in your browser.
+
+![Perceptron Decision Boundary](public/screenshots/demo.png)
 
 ## How to Use
 
