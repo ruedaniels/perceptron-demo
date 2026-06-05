@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perceptron Decision Boundary</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Perceptron Learning</h1>
+        <p class="subtitle">A single neuron learns to separate two classes of points.</p>
+      </header>
+
+      <canvas id="canvas"></canvas>
+
+      <div class="stats">
+        <div class="stat"><span id="s-epoch">0</span><label>Epochs</label></div>
+        <div class="stat"><span id="s-errors">0</span><label>Errors</label></div>
+        <div class="stat"><span id="s-accuracy">0%</span><label>Accuracy</label></div>
+      </div>
+
+      <div class="controls">
+        <div class="control">
+          <label>Learning rate η</label>
+          <input type="range" id="r-eta" min="1" max="20" value="5" step="1" />
+          <span id="o-eta">0.05</span>
+        </div>
+        <div class="control">
+          <label>Points per class</label>
+          <input type="range" id="r-points" min="5" max="30" value="15" step="1" />
+          <span id="o-points">15</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="btn-reset">Reset</button>
+        <button id="btn-step">Step once</button>
+        <button id="btn-train">Train</button>
+        <button id="btn-stop">Stop</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
