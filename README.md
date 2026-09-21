@@ -35,8 +35,8 @@ where R is the radius of the smallest sphere enclosing the data and γ is the ge
 ## Install
 
 ```bash
-git clone https://github.com/ruedaniels/perception-demo.git
-cd perception-demo
+git clone https://github.com/ruedaniels/perceptron-demo.git
+cd perceptron-demo
 npm install
 npm run dev
 ```
