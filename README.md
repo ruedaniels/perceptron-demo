@@ -22,7 +22,7 @@ The perceptron learning rule is an online gradient descent algorithm. For each m
 
 **Δwᵢ = η · (y - ŷ) · xᵢ**
 
-where y is the true label, ŷ is the predicted label, and η is the learning rate. Correctly classified points produce no weight change. This is mathematically equivalent to the Hebbian update rule — weight changes are driven by the product of pre- and post-synaptic activity — and forms the basis of the weight matrix used in the Hopfield network.
+where y is the true label, ŷ is the predicted label, and η is the learning rate. Correctly classified points produce no weight change. This is closely related to the Hebbian update rule — in both, weight changes are driven by the product of pre- and post-synaptic activity — except that the perceptron rule is gated by the error (y − ŷ), so only misclassified points change the weights. The Hebbian rule itself forms the basis of the weight matrix used in the Hopfield network.
 
 ### Convergence Theorem
 
@@ -70,7 +70,7 @@ The decision boundary `w₀x + w₁y + w₂ = 0` is re-rendered after every epoc
 - Input space restricted to 2D for geometric interpretability
 - Binary bipolar labels {-1, +1} rather than {0, 1} to center the activation function at zero
 - Data generated to be linearly separable by construction — left half vs right half of the canvas
-- Synchronous batch iteration per epoch rather than true online (stochastic) updates
+- Points are visited in a fixed order each epoch (no shuffling), with weights updated immediately after each misclassified point
 
 ## Known Limitations
 
